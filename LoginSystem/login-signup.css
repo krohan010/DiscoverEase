@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: rgb(36, 5, 5);
+}
+a{
+    text-decoration: none;
+    color: rgb(71, 21, 151);
+    font-size: 20px;
+}
+body{
+    height: 100vh;
+    /* height: 800px; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Images/Golder_Temple.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.mssgbox{
+    width: 75%;
+    height: 25px;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: cubic-bezier(0,-0.44,.28,1.39);
+}
+.mssgbox .mssg{
+    margin: 0px 20px;
+    text-align: center;
+    font-size: larger;
+}
+.success, .danger  {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100px;
+    margin-bottom: 5vw;
+}
+.danger{
+    background-color: rgba(190, 21, 21, 0.336);
+}
+.success{
+    background-color: rgb(81, 179, 81);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.container{
+     border: 2px solid rgba(255, 255, 255, 0.18);
+     border-radius: 5px;
+     width: 400px;
+     height: 400px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     backdrop-filter: blur(30px);
+     box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+}
+.container > p{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10px;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 85%;
+}
+.container .inputs{
+    /* border: 1px solid orange; */
+    border-radius: 5px;
+    width: 350px;
+    border-bottom: 2px solid black;
+    display: flex;
+}
+.inputs img{
+    position: relative;
+    right: 17px;
+    bottom: 0px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+.inputs img:hover{
+    transform: scale(1.1);
+}
+.inputs input , select{
+    width: 90%;
+    font-size: 18px;
+    padding: 5px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-weight: bolder;
+}
+#who{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#who label{
+    font-size: 24px;
+}
+#who select{
+    width: 220px;
+    text-align: center;
+    padding: 5px;
+}
+#register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    border: none;
+    justify-content: space-between;
+}
+#submit{
+    width: 337px;
+}
+#submit > input{
+    width: 100%;
+    transition: all ease 1s;
+}
+#submit> input:hover{
+    background-color: rgb(30, 63, 63);
+    border-radius: 5px;
+    border: 2px solid black;
+    transform: scaleY(1.1);
+    color: white;
+}
+
+/* Registration CSS */
+
+/* Login CSS */
+#login form{
+    height: 72%;
+}
+#login input[type="submit"]:hover{
+    background: linear-gradient(to right bottom, rgb(219, 153, 9), rgb(58, 2, 2), rgb(233, 200, 16));
+}
+#register a{
+    color: darkblue;
+    font-weight: bolder;
+}

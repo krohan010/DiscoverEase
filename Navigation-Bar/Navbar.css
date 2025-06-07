@@ -1,0 +1,118 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Selection */
+*::selection {
+    background-color: brown;
+    color: white;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(78, 199, 173, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Section */
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Title */
+nav .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Navigation Bar */
+#navigation-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    background-color: #267268;
+    border-radius: 10px;
+    box-shadow: inset 1px -3px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Navigation Links */
+#navigation-bar li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+#navigation-bar li a:hover {
+    background-color: brown;
+    color: white;
+}
+
+/* Dropdown (Explore, Logout) */
+#explore ul, #login ul {
+    display: none;
+    position: absolute;
+    background-color: #267268;
+    padding: 5px 0;
+    list-style: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#explore:hover ul, #login:hover ul {
+    display: block;
+}
+
+#explore ul li a, #login ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+#explore ul li a:hover, #login ul li a:hover {
+    background-color: brown;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav .title {
+        font-size: 1.2rem;
+    }
+
+    #navigation-bar {
+        flex-direction: column;
+    }
+
+    #navigation-bar li {
+        width: 100%;
+    }
+}
